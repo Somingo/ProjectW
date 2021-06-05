@@ -21,6 +21,9 @@ module.exports = function (config) {
       },
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    files: [
+      {pattern: 'test/**/*.*', watched: false, included: false, served: true, nocache: false}
+    ],
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },

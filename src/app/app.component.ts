@@ -7,13 +7,13 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 })
 export class AppComponent implements AfterViewInit {
   title = 'ProjectW';
+  gl: WebGL2RenderingContext;
 
   @ViewChild('glCanvas')
   public glCanvas;
 
   ngAfterViewInit(): void {
-    const gl: WebGL2RenderingContext = this.glCanvas.nativeElement.getContext('webgl2');
-
+    this.gl = this.glCanvas.nativeElement.getContext('webgl2');
   }
 
 }
