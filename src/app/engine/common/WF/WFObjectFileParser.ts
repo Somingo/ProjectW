@@ -39,7 +39,14 @@ export class WFObjectFileParser extends ListFileParser<WFObjectFile> {
   };
 
   wfTriangleHandler: TokenHandler = (name, params) => {
-    params.forEach((param, index) => index === 0 || this.wfTriangleParam(param));
+    const temp: string[] = [params[1], params[2], params[3]];
+    if (params.length === 5) {
+      temp.push(params[2]);
+      temp.push(params[3]);
+      temp.push(params[4]);
+    }
+    temp.forEach((param, index) => this.wfTriangleParam(param));
+
   };
 
   // tslint:disable-next-line:member-ordering

@@ -14,6 +14,7 @@ vn -1.0000 0.0000 0.0000
 g groupName
 usemtl Material
 s off
+f 1/1/1 5/2/1 7/3/1
 f 1/1/1 5/2/1 7/3/1 3/4/1
 `;
 
@@ -55,9 +56,9 @@ describe('WFObjectFileParser', () => {
             {name: '__default__', vInd: [], vtInd: [], vnInd: [], s: false, usemtl: null},
             {
               name: 'groupName',
-              vInd: [1, 5, 7, 3],
-              vtInd: [1, 2, 3, 4],
-              vnInd: [1, 1, 1, 1],
+              vInd: [1, 5, 7, 1, 5, 7, 5, 7, 3],
+              vtInd: [1, 2, 3, 1, 2, 3, 2, 3, 4],
+              vnInd: [1, 1, 1, 1, 1, 1, 1, 1, 1],
               s: false,
               usemtl: 'Material'
             }
